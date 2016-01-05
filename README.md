@@ -7,6 +7,7 @@ I modified ttzc.js so it displays differences of 2 days.
 At first I just wanted to call getDay on fromDate and toDate, but that's no good since it returns a day from 0-6. I can't subtract numbers like those to get days between since if today is day 6, then tomorrow is day 0. 
 
 So I had to do this to compare the days:
+
 1. Make copies of the date objects
 2. Remove the hour from the copies
 3. Take difference of copies in milliseconds
@@ -32,8 +33,9 @@ I subtracted the two times to get the difference in days between them.
     var dDay = Math.round((toDay.getTime()-fromDay.getTime())/86400000);
 ```
 On the same line where I took the difference between the days:
-*I converted the millisecond difference to days.
-*I rounded to assure integers for indexing.
+
+* I converted the millisecond difference to days.
+* I rounded to assure integers for indexing.
 
 ## Step 4
 I made an array with all the right phrases. I cleared the info, assuming 0 day difference.
