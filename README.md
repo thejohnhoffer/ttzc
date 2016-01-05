@@ -2,7 +2,7 @@
 
 ## Hi Jonathan,
 
-I modified ttzc.js so it accepts 2 day diffs.
+I modified ttzc.js so it displays differences of 2 days.
 
 At first I just wanted to call getDay on fromDate and toDate, but that's no good since it returns a day from 0-6. I can't subtract numbers like those to get days between since if today is day 6, then tomorrow is day 0. 
 
