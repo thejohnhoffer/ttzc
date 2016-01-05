@@ -28,7 +28,7 @@ I set the copied dates to have hour zero in order to find the number of days bet
 ```
 
 ## Step 3
-I subtracted the two times to get the difference in days between them.
+I subtracted the two dates to get the difference in days between them.
 ```javascript
     var dDay = Math.round((toDay.getTime()-fromDay.getTime())/86400000);
 ```
