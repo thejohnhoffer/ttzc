@@ -366,17 +366,20 @@ TTZC.prototype.convert  = function(s, from) {
   if((fromDate != null) && (fromSide.getOffset() != null) && (toSide.getOffset() != null)) {
     var toDate = convertBase(s, fromSide.getContext(), toSide.getContext());
 
-    // If we need a suffix, then figure out which direction.
-    if(fromDate.getDay() != toDate.getDay()) {
-      if(toSide.getOffset() > fromSide.getOffset()) {
-          toSide.getView().setTimeInfo('next day');
-      } else {
-          toSide.getView().setTimeInfo('previous day');
-      }
-    } else {
-        toSide.getView().clearTimeInfo();
-    }
+    // New date objects cloned from each date
+    var fromDay = new Date(fromDate.getTime());
+    var toDay = new Date(toDate.getTime());
+    // Measure days from the same hour
+    fromDay.setHours(0);
+    toDay.setHours(0);
+    // Get difference between days
+    var dDay = Math.round((toDay.getTime()-fromDay.getTime())/86400000);
+    var dName = ['two days behind','previous day','','next day','two days ahead'];
     fromSide.getView().clearTimeInfo();
+    // Add appropriate suffix if needed
+    if (dDay != 0 && dDay > -3 && dDay < 3){
+      toSide.getView().setTimeInfo(dName[dDay+2]);
+    }
 
     convertedDateString = toDate.toString(time_format);
     toSide.setTime(convertedDateString);
