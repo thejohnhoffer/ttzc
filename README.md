@@ -1,7 +1,6 @@
 # ttzc
-The Time Zone Convertor
 
-Hi Jonathan,
+## Hi Jonathan,
 
 I modified ttzc.js so it accepts 2 day diffs.
 
