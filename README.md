@@ -3,7 +3,7 @@
 ## Dear Reader,
 This is some code I wrote in Jan 2016 for [Jonathan Berger's](http://www.baligu.com/) [Time Zone Converter](http://www.thetimezoneconverter.com/). Near midnight in the selected cities of "Apia" and "Pago Pago", the time was shown as the "NEXT DAY" instead of the actual two day difference. I modified his '.js' file to fix it.
 
-Suprisingly, he didn't mind my precision, but matched me with it. When comparing days, I should have tested it for 30 and 45 minute offset time zones. In lieu of doing this, the more parsimonious route involved simply removing the two towns nearest the international date line.
+Suprisingly, he didn't mind my precision, but matched me with it. When comparing days, I should have tested it for 30 and 45 minute offset time zones. In lieu of doing this, he removed the two towns nearest the international date line.
 
 ## Dear Jonathan,
 
