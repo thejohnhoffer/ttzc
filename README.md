@@ -5,6 +5,8 @@ This is some code I wrote in Jan 2016 for [Jonathan Berger's](http://www.baligu.
 
 Suprisingly, he didn't mind my precision, but matched me with it. When comparing days, I should have tested it for 30 and 45 minute offset time zones. In lieu of doing this, the more parsimonious route involved simply removing the two towns nearest the international date line.
 
+## Dear Jonathan,
+
 I modified ttzc.js so it displays differences of 2 days.
 
 At first I just wanted to call getDay on fromDate and toDate, but that's no good since it returns a day from 0-6. I can't easily subtract numbers like those to get days between since if today is day 6, then tomorrow is day 0. 
