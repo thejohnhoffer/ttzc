@@ -41,7 +41,7 @@ On the same line where I took the difference between the days:
 * I rounded to assure integers for indexing.
 
 ## Step 4
-I made an array with all the right phrases. I cleared the info, assuming 0 day difference.
+I made an array with all the right phrases. I cleared the info, defaulting to no day difference.
 ```javascript
     var dName = ['two days behind','previous day','','next day','two days ahead'];
     fromSide.getView().clearTimeInfo();
